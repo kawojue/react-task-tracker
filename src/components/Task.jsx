@@ -4,7 +4,7 @@ export const Task = ({ task, onDelete, onToggle }) => {
     const { id, text, day, reminder } = task;
     return (
         <div className={`task ${reminder === true ? 'reminder' : ''}`} onDoubleClick={() => onToggle(id)}>
-            <h3>
+            <h3 className="">
                 {text}
                 <FaTimes onClick={() => onDelete(id)} />
             </h3>
