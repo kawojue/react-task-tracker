@@ -3,47 +3,25 @@
 @tailwind utilities;
 
 body {
-    @apply grid w-full h-full place-items-center;
-}
-
-#root {
-    @apply my-16;
+    user-select: none;
 }
 
 .container {
-    @apply w-[90vw] max-w-[500px] p-3;
-}
-
-.header {
-    @apply flex justify-between mb-7;
-}
-
-.add-form {
-    @apply mb-5;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+        rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    @apply w-[90vw] max-w-[500px] p-3 rounded-lg;
 }
 
 .btn {
     @apply px-3 py-0.5 rounded-md text-lg tracking-wider font-medium;
 }
 
-.btn-block {
-    @apply text-white bg-black w-full mt-3;
-}
-
-.task {
-    @apply flex w-full p-5 justify-between flex-col bg-slate-400 rounded-md mb-3;
-}
-
-.task.reminder {
-    @apply border-l-4 border-l-green-600;
+.trans {
+    @apply transition-all ease-linear duration-200;
 }
 
 .form-control {
     @apply flex flex-col mb-5 gap-3;
-}
-
-.form-control-check {
-    @apply flex justify-between;
 }
 
 h1 {
@@ -73,8 +51,4 @@ input:focus {
 input.text:focus,
 input.text:valid {
     @apply border-b-slate-500;
-}
-
-input.reminder {
-    @apply w-4;
 }

@@ -24,7 +24,7 @@ const AddTask = ({ onAdd }) => {
     }
 
     return (
-        <form className='add-form' onSubmit={submit}>
+        <form className='mb-5' onSubmit={submit}>
             <div className='form-control'>
                 <label>Task</label>
                 <input type='text' placeholder="Add Task.." value={text} className="text" onChange={e => setText(e.target.value)} />
@@ -33,12 +33,12 @@ const AddTask = ({ onAdd }) => {
                 <label>Day & Time</label>
                 <input type='text' placeholder="Add Day & Time" value={day} className="text" onChange={e => setDay(e.target.value)} />
             </div>
-            <div className='form-control-check'>
-                <label>Set Reminder</label>
-                <input type='checkbox' value={reminder} onChange={e => setReminder(e.currentTarget.checked)} className="reminder" checked={reminder} />
+            <div className='flex justify-between'>
+                <label htmlFor="reminder">Set Reminder</label>
+                <input type='checkbox' value={reminder} onChange={e => setReminder(e.currentTarget.checked)} className="w-5" checked={reminder} id="reminder" />
             </div>
 
-            <input type="submit" value="Save Task" className='btn btn-block' />
+            <input type="submit" value="Save Task" className='btn text-white bg-black w-full mt-5' />
         </form>
     )
 }
