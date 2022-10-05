@@ -1,5 +1,7 @@
 # react-task-tracker
 
+#clone the repository on your local machine and navigate to the folder.
+
 npm install
 
 npm run dev
