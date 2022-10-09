@@ -74,7 +74,7 @@ function App() {
       }
     }
 
-    if (tasks.length === getMax) {
+    if (tasks.length === getMax || tasks.length === 0) {
       id = tasks.length + 1;
     } else {
       id = newArr[0]
